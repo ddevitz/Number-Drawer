@@ -45,10 +45,11 @@
 }
 
 body{
+  background-color: var(--background-primary);
   color: var(--content-secondary);
 }
 
-h1, h2, h3{
+h1, h2, h3, small{
   color: var(--content-primary);
 }
 

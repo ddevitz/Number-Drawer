@@ -1,0 +1,47 @@
+h1{
+  font: var(--display-large);
+  text-transform: uppercase;
+}
+
+h3{
+  font: ver(--label-medium);
+}
+
+label{
+  font: var(--label-small);
+}
+
+.overline{
+  font: var(--overline);
+  text-transform: uppercase;
+  color: var(--gradient-content);
+}
+
+input{
+  background-color: var(--background-secondary);
+  border-radius: 0.5rem;
+  font: var(--display-small);
+}
+
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%;
+
+  background-color: var(--background-tertiary);
+  border-radius: 0.5rem;
+  padding-block: 0.75rem;
+
+  font: var(--label-small);
+}
+
+small{
+  font: var(--paragraph-small);
+}
+
+span{
+  font: var(--paragraph-medium);
+  color: var(--content-brand);
+}
