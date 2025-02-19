@@ -1,0 +1,16 @@
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline: 36px;
+
+  & header{
+    margin-block: 76px 89px;
+  }
+
+  & .container{
+    display: flex;
+    justify-content: space-between;
+    gap: 108px;
+  }
+}

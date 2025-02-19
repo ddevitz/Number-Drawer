@@ -11,59 +11,70 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-  <header>
-    <img src="assets/logo.svg" alt="Logo Numbers">
-  </header>
-
-  <div class="container">
-    <section class="details">
-      <span class="overline">Online - gratuito</span>
-      <h1>Sorteador de números</h1>
-      <ul>
-        <li>
-          <span>Como funciona o sorteador de números?</span>
-          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
-        </li>
-
-        <li>
-          <span>Posso escolher o intervalo dos números?</span>
-          <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section class="raffle">
-      <h3>Quero sortear:</h3>
-      <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
-      
-      <div class="input-wrapper">
-        <div class="numbers">
-          <label for="qtd-numbers">Números</label>
-          <input id="qtd-numbers" type="number">
+  <main>
+    <header>
+      <img src="assets/logo.svg" alt="Logo Numbers">
+    </header>
+  
+    <div class="container">
+      <section class="details">
+        <div class="title">
+          <span class="overline">Online - gratuito</span>
+          <h1>Sorteador de números</h1>
         </div>
 
-        <div class="from">
-          <label for="initial-number">de</label>
-          <input type="number" id="initial-number">
+        <ul role="list">
+          <li>
+            <span>
+              <img src="assets/icons/person.svg">
+              Como funciona o sorteador de números?
+            </span>
+            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+          </li>
+  
+          <li>
+            <span>
+              <img src="assets/icons/person.svg">
+              Posso escolher o intervalo dos números?
+            </span>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          </li>
+        </ul>
+      </section>
+  
+      <section class="raffle">
+        <h2>Quero sortear:</h2>
+        <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        
+        <div class="input-wrapper">
+          <div class="numbers">
+            <label for="qtd-numbers">Números</label>
+            <input id="qtd-numbers" type="number">
+          </div>
+  
+          <div class="from">
+            <label for="initial-number">de</label>
+            <input type="number" id="initial-number">
+          </div>
+  
+          <div class="to">
+            <label for="final-number">de</label>
+            <input type="number" id="final-number">
+          </div>
         </div>
-
-        <div class="to">
-          <label for="final-number">de</label>
-          <input type="number" id="final-number">
+  
+        <div class="checkbox">
+          <input type="checkbox">
+          <label><small>Não repetir número</small></label>
         </div>
-      </div>
+  
+        <button>
+          Sortear
+          <img src="assets/icons/arrow.svg">
+        </button>
 
-      <div class="checkbox">
-        <input type="checkbox">
-        <label><small>Não repetir número</small></label>
-      </div>
-
-      <button>
-        Sortear
-        <img src="assets/icons/arrow.svg">
-      </button>
-    </section>
-
-  </div>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
