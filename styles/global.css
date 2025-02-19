@@ -47,9 +47,10 @@
 body{
   background-color: var(--background-primary);
   color: var(--content-secondary);
+  font: var(--paragraph-small);
 }
 
-h1, h2, h3, small{
+h1, h2, h3, small, button{
   color: var(--content-primary);
 }
 
@@ -63,8 +64,6 @@ ul[role="list"]{
   list-style: none;
 }
 
-button{
-  list-style: none;
-  text-decoration: none;
+input{
   border: none;
 }
