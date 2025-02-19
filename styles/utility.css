@@ -9,12 +9,11 @@ h3{
 
 label{
   font: var(--label-small);
+  text-transform: uppercase ;
 }
 
-.overline{
-  font: var(--overline);
-  text-transform: uppercase;
-  color: var(--gradient-content);
+label:hover{
+  color: var(--background-brand);
 }
 
 input{
@@ -31,17 +30,31 @@ button{
   width: 100%;
 
   background-color: var(--background-tertiary);
+  border: 1px solid var(--background-tertiary);
   border-radius: 0.5rem;
-  padding-block: 0.75rem;
+  padding-block: 1rem;
 
   font: var(--label-small);
+  text-transform: uppercase;
+}
+
+button:hover{
+  background-color: var(--background-secondary);
+  border: none;
 }
 
 small{
   font: var(--paragraph-small);
+  color: var(--content-primary);
 }
 
 span{
   font: var(--paragraph-medium);
   color: var(--content-brand);
+}
+
+.overline{
+  font: var(--overline);
+  text-transform: uppercase;
+  color: var(--gradient-content);
 }
