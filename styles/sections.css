@@ -26,5 +26,125 @@
 }
 
 .raffle{
-  max-width: 482px;
+  width: 482px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & .input-wrapper{
+
+    display: flex;
+    gap: 20px;
+
+    margin-bottom: 12px;
+
+    & .numbers, 
+    & .from, 
+    & .to{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  & .checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 40px;
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--content-tertiary);
+        border-radius: 24px;
+        transition: 0.4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 14px;
+        width: 14px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background: var(--gradient-background);
+      }
+      
+      input:checked + .slider:before {
+        transform: translateX(10px);
+      }
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    label small{
+      text-transform: none;
+    }
+
+  }
+
+  & .screen-1{
+    & .title{
+      margin-bottom: 40px;
+  
+      h2{
+        margin-bottom: 2px;
+      }
+  
+      p{
+        font: var(--paragraph-large);
+      }
+    }
+  }
+
+  & .screen-2{
+
+    .result{
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+
+      margin-block: 40px;
+    }
+
+    .title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .number{
+      background-color: var(--background-primary);
+
+      color: var(--content-brand);
+      font: 700 3rem/150% var(--ff-roboto-mono);
+
+      padding: 8px 13px;
+      border-radius: 28px;
+      
+    }
+  }
 }

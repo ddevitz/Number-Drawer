@@ -43,37 +43,63 @@
       </section>
   
       <section class="raffle">
-        <h2>Quero sortear:</h2>
-        <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
-        
-        <div class="input-wrapper">
-          <div class="numbers">
-            <label for="qtd-numbers">Números</label>
-            <input id="qtd-numbers" type="number">
+        <div class="screen-1 hide">
+          <div class="title">
+            <h2>Quero sortear:</h2>
+            <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
           </div>
   
-          <div class="from">
-            <label for="initial-number">de</label>
-            <input type="number" id="initial-number">
+          <div class="input-wrapper">
+            <div class="numbers">
+              <label for="qtd-numbers">Números</label>
+              <input id="qtd-numbers" type="number" placeholder="0">
+            </div>
+          
+            <div class="from">
+              <label for="initial-number">de</label>
+              <input type="number" id="initial-number" placeholder="0">
+            </div>
+          
+            <div class="to">
+              <label for="final-number">de</label>
+              <input type="number" id="final-number" placeholder="0">
+            </div>
           </div>
+          
   
-          <div class="to">
-            <label for="final-number">de</label>
-            <input type="number" id="final-number">
+          <div class="checkbox">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+            <label><small>Não repetir número</small></label>
           </div>
+    
+          <button type="submit">
+            Sortear
+            <img src="assets/icons/arrow.svg">
+          </button>
         </div>
-  
-        <div class="checkbox">
-          <input type="checkbox">
-          <label><small>Não repetir número</small></label>
+
+        <div class="screen-2 ">
+          <div class="title">
+            <h2>Resultado do sorteio</h2>
+            <div class="overline">1º resultado</div>
+          </div>
+
+          <div class="result">
+            <div class="number">23</div>
+            <div class="number">12</div>
+          </div>
+            
+          <button type="submit">
+            Sortear novamente
+            <img src="assets/icons/return.svg">
+          </button>
         </div>
-  
-        <button>
-          Sortear
-          <img src="assets/icons/arrow.svg">
-        </button>
 
       </section>
+
     </div>
   </main>
 </body>

@@ -11,9 +11,10 @@ input{
   background-color: var(--background-secondary);
   border-radius: 0.5rem;
   font: var(--display-small);
+  border: 2px solid transparent;
 
-  width: 88px;
-  height: auto;
+  max-width: 88px;
+  padding: 8px 12px;
 
   display: flex;
   text-align: center;
@@ -32,15 +33,24 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0; /* Remove margem extra */
 }
 
+input:hover{
+  border: 2px solid var(--content-brand);
+}
+
+input:focus{
+  border: 2px solid var(--content-brand);
+}
+
 button{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   
   width: 100%;
 
   background-color: var(--background-tertiary);
-  border: 1px solid var(--background-tertiary);
+  border: 2px solid var(--background-tertiary);
   border-radius: 0.5rem;
   padding-block: 1rem;
 
@@ -50,7 +60,7 @@ button{
 
 button:hover{
   background-color: var(--background-secondary);
-  border: none;
+  border: 2px solid var(--content-brand);
 }
 
 small{
@@ -67,4 +77,8 @@ span{
   font: var(--overline);
   text-transform: uppercase;
   color: var(--gradient-content);
+}
+
+.hide{
+  display: none;
 }
