@@ -73,13 +73,13 @@
   
           <div class="checkbox">
             <label class="switch">
-              <input type="checkbox">
+              <input id="no-repeat" type="checkbox">
               <span class="slider"></span>
             </label>
             <label><small>Não repetir número</small></label>
           </div>
     
-          <button type="submit">
+          <button id="btn-raffle" type="submit">
             Sortear
             <img src="assets/icons/arrow.svg">
           </button>
@@ -88,15 +88,13 @@
         <div class="screen-2 hide">
           <div class="title">
             <h2>Resultado do sorteio</h2>
-            <div class="overline">1º resultado</div>
+            <div id="turn" class="overline">1º resultado</div>
           </div>
 
           <div class="result">
-            <div class="number">23</div>
-            <div class="number">12</div>
           </div>
             
-          <button type="submit">
+          <button id="btn-refresh" type="submit">
             Sortear novamente
             <img src="assets/icons/return.svg">
           </button>
