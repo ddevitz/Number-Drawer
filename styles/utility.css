@@ -34,11 +34,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input:hover{
-  border: 2px solid var(--content-brand);
+  outline: 1px solid var(--content-brand);
 }
 
 input:focus{
-  border: 2px solid var(--content-brand);
+  outline: 1px solid var(--content-brand);
 }
 
 button{
