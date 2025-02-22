@@ -39,28 +39,38 @@ noRepeatNumber.addEventListener("click", () =>{
 })
 
 btnRaffle.addEventListener("click", () => {
-  if(noRepeatNumber.classList.contains("active")){
-    singleDrawNumber(nDraws, startNumber, endNumber)
-  } else {
-    drawNumber(nDraws, startNumber, endNumber)
-  }
-
-  turns += 1
-
-  showScreen()
-})
-
-btnRefresh.addEventListener("click", () =>{
-  disappearScreen()
-
-})
-
-function drawNumber(nDraws, startNumber, endNumber){
-
   if(startNumber > endNumber){
     alert("O valor inicial não pode ser maior que o valor final.")
     return
   }
+
+  if(noRepeatNumber.classList.contains("active")){
+    let rangeSize = endNumber - startNumber + 1;
+
+    if (nDraws > rangeSize){
+      alert(`Não é possível sortear ${nDraws} números únicos entre ${startNumber} e ${endNumber}.`)
+      return
+    }
+  
+    results = singleDrawNumber(nDraws, startNumber, endNumber)
+
+  } else {
+    results =  drawNumber(nDraws, startNumber, endNumber)
+  }
+
+  turns += 1
+  createDrawnNumberElement()
+})
+
+btnRefresh.addEventListener("click", function(event){
+  screenOne.classList.remove("hide")
+  screenTwo.classList.add("hide")
+  
+  results = []; // Limpa o array
+  result.innerHTML = ""; // Remove os elementos criados
+})
+
+function drawNumber(nDraws, startNumber, endNumber){
 
   for (let i = 0; i < nDraws; i++){
     let randomNumber = Math.floor(Math.random() * (endNumber - startNumber + 1)) + startNumber;
@@ -68,33 +78,22 @@ function drawNumber(nDraws, startNumber, endNumber){
     results.push(randomNumber);
   }
 
-  return Array(results)
+  return Array.from(results)
 }
 
 function singleDrawNumber(nDraws, startNumber, endNumber){
-  if(startNumber > endNumber){
-    alert("O valor inicial não pode ser maior que o valor final.")
-    return
-  }
 
-  let rangeSize = endNumber - startNumber + 1;
+  uniqueNumbers = new Set();
 
-  if (nDraws > rangeSize){
-    alert(`Não é possível sortear ${nDraws} números únicos entre ${startNumber} e ${endNumber}.`)
-    return
-  }
-
-  results = new Set();
-
-  while (results.size < nDraws){
+  while (uniqueNumbers.size < nDraws){
     let randomNumber = Math.floor(Math.random() * rangeSize) + startNumber;
-    results.add(randomNumber);
+    uniqueNumbers .add(randomNumber);
   }
   
-  console.log(Array.from(results))
+  return Array.from(uniqueNumbers);
 }
 
-function showScreen(){
+function createDrawnNumberElement(){
   screenOne.classList.add("hide")
   screenTwo.classList.remove("hide")
 
@@ -109,11 +108,3 @@ function showScreen(){
     drawnNumber.textContent = results[i]
   }
 }
-
-function disappearScreen(){
-  screenOne.classList.remove("hide")
-  screenTwo.classList.add("hide")
-
-  results = [];
-}
-
