@@ -82,6 +82,7 @@ function drawNumber(nDraws, startNumber, endNumber){
 }
 
 function singleDrawNumber(nDraws, startNumber, endNumber){
+  let rangeSize = endNumber - startNumber + 1;
 
   uniqueNumbers = new Set();
 
