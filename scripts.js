@@ -105,6 +105,9 @@ function createDrawnNumberElement(){
     const drawnNumber = document.createElement("div")
     drawnNumber.classList.add("number")
     result.append(drawnNumber)
+
+    // Adiciona um delay crescente para cada número
+    drawnNumber.style.animationDelay = `${i * 1.2}s`;
     
     drawnNumber.textContent = results[i]
   }
